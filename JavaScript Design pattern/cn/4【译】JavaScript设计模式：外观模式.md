@@ -1,5 +1,5 @@
-这是JavaScript设计模式的第四篇，这次我们来认识一下外观模式（the Facade pattern）。不管你有没有听说过它，我敢保证，你用的任何一种编程语言，哪怕只写过几行代码你都会用到外观模式。（这么说虽然有些夸张，但是你一定不介意的对吧？）。你可以通过外观模式把一堆复杂接口定义成一小段代码，之后就随便你怎么调用了。难道你没在一个命名函数里写过代码？对，这就是外观模式的一个例子。
-![facade_structure.png][p1]
+这是JavaScript设计模式的第四篇，这次我们来认识一下外观模式（the Facade Pattern）。不管你有没有听说过它，我敢保证，你用的任何一种编程语言，哪怕只写过几行代码你都会用到外观模式。（这么说虽然有些夸张，但是你一定不介意的对吧？）。你可以通过外观模式把一堆复杂接口定义成一小段代码，之后就随便你怎么调用了。难道你没在一个命名函数里写过代码？对，这就是外观模式的一个例子。
+![facade_structure.png][facade_structure]
 在我们进一步探讨之前，我想提醒一下，我们从JavaScript设计模式系列一步步走来。先是[单例][cn1]然后是[桥接][cn2]，最后是上一篇的[组合][cn3]。
 
 ## 几个现成的例子
@@ -69,9 +69,11 @@ setStyles(['foo', 'bar', 'baz'], {
 ```
 如果我们有很多元素想设置相同的样式，那这段代码真是为我们节省了不少时间。
 
-## 总结JavaScript语言精粹
+## 总结
 这就是这一节JavaScript设计模式的全部内容了。我很荣幸能在评论中看到你的经验之谈。如果你真心觉得这篇文章不错请你用下方的分享按钮把我这个小小的博客分享到网上。说真的，我全凭它活呢。
 
+
+[facade_structure]: http://www.codingserf.com/wp-content/uploads/2015/05/facade_structure.png
 JavaScript设计模式系列：
 - [单例模式][cn1]（[Singleton Pattern][en1]）
 - [桥接模式][cn2]（[Bridge Pattern][en2]）
@@ -91,21 +93,21 @@ JavaScript设计模式系列：
 转载请注明：
 英文作者：[Joe Zim](http://www.joezimjs.com/authors/joe-zimmerman/)
 英文原文：[http://www.joezimjs.com/javascript/javascript-design-patterns-facade/][en4]
-中文翻译：[David @CodingSerf](http://www.codingserf.com)
-中文译文：[http://www.codingserf.com/index.php/2015/05/javascript-design-partterns-facade/][cn4]
+中文译者：[David @CodingSerf](http://www.codingserf.com)
+中文译文：[http://www.codingserf.com/index.php/2015/05/javascript-design-patterns-facade/][cn4]
 
-[cn1]: http://www.codingserf.com/index.php/2015/05/javascript-design-partterns-singleton/
-[cn2]: http://www.codingserf.com/index.php/2015/05/javascript-design-partterns-bridge/
-[cn3]: http://www.codingserf.com/index.php/2015/05/javascript-design-partterns-composite/
-[cn4]: http://www.codingserf.com/index.php/2015/05/javascript-design-partterns-facade/
-[cn5]: http://www.codingserf.com/index.php/2015/05/javascript-design-partterns-adapter/
-[cn6]: http://www.codingserf.com/index.php/2015/05/javascript-design-partterns-decorator/
-[cn7]: http://www.codingserf.com/index.php/2015/05/javascript-design-partterns-factory-part-1/
-[cn8]: http://www.codingserf.com/index.php/2015/05/javascript-design-partterns-factory-part-2/
-[cn9]: http://www.codingserf.com/index.php/2015/05/javascript-design-partterns-proxy/
-[cn10]: http://www.codingserf.com/index.php/2015/05/javascript-design-partterns-observer/
-[cn11]: http://www.codingserf.com/index.php/2015/05/javascript-design-partterns-command/
-[cn12]: http://www.codingserf.com/index.php/2015/05/javascript-design-partterns-chain-of-responsibility/
+[cn1]: http://www.codingserf.com/index.php/2015/05/javascript-design-patterns-singleton/
+[cn2]: http://www.codingserf.com/index.php/2015/05/javascript-design-patterns-bridge/
+[cn3]: http://www.codingserf.com/index.php/2015/05/javascript-design-patterns-composite/
+[cn4]: http://www.codingserf.com/index.php/2015/05/javascript-design-patterns-facade/
+[cn5]: http://www.codingserf.com/index.php/2015/05/javascript-design-patterns-adapter/
+[cn6]: http://www.codingserf.com/index.php/2015/05/javascript-design-patterns-decorator/
+[cn7]: http://www.codingserf.com/index.php/2015/05/javascript-design-patterns-factory-part-1/
+[cn8]: http://www.codingserf.com/index.php/2015/05/javascript-design-patterns-factory-part-2/
+[cn9]: http://www.codingserf.com/index.php/2015/05/javascript-design-patterns-proxy/
+[cn10]: http://www.codingserf.com/index.php/2015/05/javascript-design-patterns-observer/
+[cn11]: http://www.codingserf.com/index.php/2015/05/javascript-design-patterns-command/
+[cn12]: http://www.codingserf.com/index.php/2015/05/javascript-design-patterns-chain-of-responsibility/
 
 [en1]: http://www.joezimjs.com/javascript/javascript-design-patterns-singleton/
 [en2]: http://www.joezimjs.com/javascript/javascript-design-patterns-bridge/

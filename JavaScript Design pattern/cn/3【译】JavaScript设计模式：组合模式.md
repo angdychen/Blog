@@ -1,11 +1,11 @@
-我上一篇博客继JavaScript设计模式系列的第一篇[单例][cn1]之后介绍了[桥接设计模式][cn2]。今天我们继续介绍组合模式（the Composote Parttern）。组合模式非常有用。通过“组合”这个词的定义我们就能知道组合模式是把很多部分组合起来创建一个整体。
+我上一篇博客继JavaScript设计模式系列的第一篇[单例][cn1]之后介绍了[桥接设计模式][cn2]。今天我们继续介绍组合模式（the Composote Pattern）。组合模式非常有用。通过“组合”这个词的定义我们就能知道组合模式是把很多部分组合起来创建一个整体。
 组合模式有两个优点：
 你可以像对待单个独立的对象一样对待这些对象的集合。在组合模式中，函数的执行会被分派到各个子对象去执行。这对一个大的集合非常有用（这里可能有些似是而非，因为你并不知道多大的集合才算大，所以也就无从知晓会遭受多大的性能影响）。
 组合模式把对象组织成一棵树的结构，并且，因为每一个组合对象都包含一个获取其子对象（children）的方法，所以你可以隐藏具体的实现，并且随便你怎么组织这些子对象。
 
 ## 组合模式的结构
 在组合模式的层级里有两类对象：叶子(leaf)和组合(composite)。下面图片展示的是一个组合结构的例子。它是递归的，这也是这个模式的强大之处。叶子对象下面不能再有任何子对象，组合对象下面一定有子对象，这就是他们的不同之处。
-![composite_structure.png][p1]
+![composite_structure.png][composite_structure]
 
 ## 组合模式的例子
 组合模式有一些常见的例子。如果你使用过PC，你应该能常常见到这种模式的一个具体实现：文件结构。每个硬盘(disk)或驱动器(driver)以及文件夹都可以当作是组合对象，每个文件可以当作叶子对象。当你删除一个文件夹的时候，不仅仅是删除这个文件夹，也包括这个文件夹下包含的所有其他文件夹和文件。你不会找到比这个更好的例子了。
@@ -14,7 +14,7 @@
 
 ## 组合模式的JavaScript例子
 我不想用上面提到的那些例子来实现一个组合模式的JavaScript版本。我想做一个图片画廊(image gallery)。实事上它和文件系统的例子很像，除了不能映射到每个图片具体的磁盘存储位置。这个例子仅仅只是有几层而已。请看下面的图片：
-![gallery_structure.png][p2]
+![gallery_structure.png][gallery_structure]
 注意，在这张图里，所有的image都包含在“Gallery”这一层的组合节点下，这当然不是必须的，它只是示意一下这些图片是如何组织的。
 每一个对象都需要实现一个接口，然而JavaScript里没有接口的概念，为了确保我们实现的这些方法是对的，我们把它们列了出来：
 
@@ -152,6 +152,8 @@ container.show();
 如果你认为此文对你有所帮助或者你只是纯粹地喜欢这篇文章，请你用文章下方的分享按钮把它分享出去。谢谢！
 
 
+[composite_structure]: http://www.codingserf.com/wp-content/uploads/2015/05/composite_structure.png
+[gallery_structure]: http://www.codingserf.com/wp-content/uploads/2015/05/gallery_structure.png
 JavaScript设计模式系列：
 - [单例模式][cn1]（[Singleton Pattern][en1]）
 - [桥接模式][cn2]（[Bridge Pattern][en2]）
@@ -171,21 +173,21 @@ JavaScript设计模式系列：
 转载请注明：
 英文作者：[Joe Zim](http://www.joezimjs.com/authors/joe-zimmerman/)
 英文原文：[http://www.joezimjs.com/javascript/javascript-design-patterns-composite/][en3]
-中文翻译：[David @CodingSerf](http://www.codingserf.com)
-中文译文：[http://www.codingserf.com/index.php/2015/05/javascript-design-partterns-composite/][cn3]
+中文译者：[David @CodingSerf](http://www.codingserf.com)
+中文译文：[http://www.codingserf.com/index.php/2015/05/javascript-design-patterns-composite/][cn3]
 
-[cn1]: http://www.codingserf.com/index.php/2015/05/javascript-design-partterns-singleton/
-[cn2]: http://www.codingserf.com/index.php/2015/05/javascript-design-partterns-bridge/
-[cn3]: http://www.codingserf.com/index.php/2015/05/javascript-design-partterns-composite/
-[cn4]: http://www.codingserf.com/index.php/2015/05/javascript-design-partterns-facade/
-[cn5]: http://www.codingserf.com/index.php/2015/05/javascript-design-partterns-adapter/
-[cn6]: http://www.codingserf.com/index.php/2015/05/javascript-design-partterns-decorator/
-[cn7]: http://www.codingserf.com/index.php/2015/05/javascript-design-partterns-factory-part-1/
-[cn8]: http://www.codingserf.com/index.php/2015/05/javascript-design-partterns-factory-part-2/
-[cn9]: http://www.codingserf.com/index.php/2015/05/javascript-design-partterns-proxy/
-[cn10]: http://www.codingserf.com/index.php/2015/05/javascript-design-partterns-observer/
-[cn11]: http://www.codingserf.com/index.php/2015/05/javascript-design-partterns-command/
-[cn12]: http://www.codingserf.com/index.php/2015/05/javascript-design-partterns-chain-of-responsibility/
+[cn1]: http://www.codingserf.com/index.php/2015/05/javascript-design-patterns-singleton/
+[cn2]: http://www.codingserf.com/index.php/2015/05/javascript-design-patterns-bridge/
+[cn3]: http://www.codingserf.com/index.php/2015/05/javascript-design-patterns-composite/
+[cn4]: http://www.codingserf.com/index.php/2015/05/javascript-design-patterns-facade/
+[cn5]: http://www.codingserf.com/index.php/2015/05/javascript-design-patterns-adapter/
+[cn6]: http://www.codingserf.com/index.php/2015/05/javascript-design-patterns-decorator/
+[cn7]: http://www.codingserf.com/index.php/2015/05/javascript-design-patterns-factory-part-1/
+[cn8]: http://www.codingserf.com/index.php/2015/05/javascript-design-patterns-factory-part-2/
+[cn9]: http://www.codingserf.com/index.php/2015/05/javascript-design-patterns-proxy/
+[cn10]: http://www.codingserf.com/index.php/2015/05/javascript-design-patterns-observer/
+[cn11]: http://www.codingserf.com/index.php/2015/05/javascript-design-patterns-command/
+[cn12]: http://www.codingserf.com/index.php/2015/05/javascript-design-patterns-chain-of-responsibility/
 
 [en1]: http://www.joezimjs.com/javascript/javascript-design-patterns-singleton/
 [en2]: http://www.joezimjs.com/javascript/javascript-design-patterns-bridge/

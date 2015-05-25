@@ -75,7 +75,7 @@ window.onload = Namespace[pageName].init;
 ## 再说下《Pro JavaScript Design Patterns》
 《Pro JavaScript Design Patterns》这本书中对单例模式介绍了更多，然而事实上我把书中整整6页的内容压缩成这篇短小的博客，书中也提及了通过闭包，被动初始化和分支创建私有变量。就像我在文章开头所说，关于这本书我不想复制太多的内容过来，只是想勾起你的兴趣让你去买它。这么做的好处是，你既可以给他们经济援助，同时也能避免我让人家给告了。更何况，一篇博客文章不应该硬塞下一本书中一章的内容。
 
-如果你认为本文对你有所帮助或者你只是纯粹地喜欢这篇文章，请用文章下方的社交分享按钮把它传播出去。向我这种从后山来的从来不敢想像能有人像你这样帮我。谢谢！
+如果你认为本文对你有所帮助或者你只是纯粹地喜欢这篇文章，请用文章下方的社交分享按钮把它传播出去。像我这种从后山来的从来不敢想像能有人像你这样帮我。谢谢！
 
 请继续关注JavaScript设计模式系列的更多文章：
 - [单例模式][cn1]（[Singleton Pattern][en1]）
@@ -96,21 +96,21 @@ window.onload = Namespace[pageName].init;
 转载请注明：
 英文作者：[Joe Zim](http://www.joezimjs.com/authors/joe-zimmerman/)
 英文原文：[http://www.joezimjs.com/javascript/javascript-design-patterns-singleton/][en1]
-中文翻译：[David @CodingSerf](http://www.codingserf.com)
-中文译文：[http://www.codingserf.com/index.php/2015/05/javascript-design-partterns-singleton/][cn1]
+中文译者：[David @CodingSerf](http://www.codingserf.com)
+中文译文：[http://www.codingserf.com/index.php/2015/05/javascript-design-patterns-singleton/][cn1]
 
-[cn1]: http://www.codingserf.com/index.php/2015/05/javascript-design-partterns-singleton/
-[cn2]: http://www.codingserf.com/index.php/2015/05/javascript-design-partterns-bridge/
-[cn3]: http://www.codingserf.com/index.php/2015/05/javascript-design-partterns-composite/
-[cn4]: http://www.codingserf.com/index.php/2015/05/javascript-design-partterns-facade/
-[cn5]: http://www.codingserf.com/index.php/2015/05/javascript-design-partterns-adapter/
-[cn6]: http://www.codingserf.com/index.php/2015/05/javascript-design-partterns-decorator/
-[cn7]: http://www.codingserf.com/index.php/2015/05/javascript-design-partterns-factory-part-1/
-[cn8]: http://www.codingserf.com/index.php/2015/05/javascript-design-partterns-factory-part-2/
-[cn9]: http://www.codingserf.com/index.php/2015/05/javascript-design-partterns-proxy/
-[cn10]: http://www.codingserf.com/index.php/2015/05/javascript-design-partterns-observer/
-[cn11]: http://www.codingserf.com/index.php/2015/05/javascript-design-partterns-command/
-[cn12]: http://www.codingserf.com/index.php/2015/05/javascript-design-partterns-chain-of-responsibility/
+[cn1]: http://www.codingserf.com/index.php/2015/05/javascript-design-patterns-singleton/
+[cn2]: http://www.codingserf.com/index.php/2015/05/javascript-design-patterns-bridge/
+[cn3]: http://www.codingserf.com/index.php/2015/05/javascript-design-patterns-composite/
+[cn4]: http://www.codingserf.com/index.php/2015/05/javascript-design-patterns-facade/
+[cn5]: http://www.codingserf.com/index.php/2015/05/javascript-design-patterns-adapter/
+[cn6]: http://www.codingserf.com/index.php/2015/05/javascript-design-patterns-decorator/
+[cn7]: http://www.codingserf.com/index.php/2015/05/javascript-design-patterns-factory-part-1/
+[cn8]: http://www.codingserf.com/index.php/2015/05/javascript-design-patterns-factory-part-2/
+[cn9]: http://www.codingserf.com/index.php/2015/05/javascript-design-patterns-proxy/
+[cn10]: http://www.codingserf.com/index.php/2015/05/javascript-design-patterns-observer/
+[cn11]: http://www.codingserf.com/index.php/2015/05/javascript-design-patterns-command/
+[cn12]: http://www.codingserf.com/index.php/2015/05/javascript-design-patterns-chain-of-responsibility/
 
 [en1]: http://www.joezimjs.com/javascript/javascript-design-patterns-singleton/
 [en2]: http://www.joezimjs.com/javascript/javascript-design-patterns-bridge/

@@ -43,9 +43,9 @@ $('someElement').bind('click', getXBridge);
 JavaScript本身并没有类的概念，但是你可以模拟接口，并使用原型来模拟类。这个例子最早见于《[Head First Design Pattern](http://www.amazon.com/gp/product/0596007124/ref=as_li_ss_tl?tag=jozisjabl-20)》，那是一个Java版本。然而它其实是个无关紧要到在书的后面都没有提供代码实例的模式，所以我只能使用几张示意图（此外我还重建了这些图，因为我太聪明了）。
 
 ### 我们的首发产品
-![original_remote.png][p1]
+![original_remote.png][original_remote]
 首先我们从`RemoteControl`接口开始。`ToshibaRemote`和`SonyRemote`都实现了这个接口并且工作于各自的电视。通过这些代码你可以在任意遥控器上调用`on()`，`off()`或者是`setChannel()`，尽管所有的电视都不一样，但是它们都能正常工作。当你想用桥接模式对控制器做些改进时会发生些什么呢：
-![bridge_remote.png][p2]
+![bridge_remote.png][bridge_remote]
 现在这些电视继承了一个接口，其他遥控器继承了另一个接口（事实上遥控器只有一个类，因为它只需要一个实现），我们可以通过继承来创建变量，并且保持兼容性。是不是想看看代码是怎么写的？我会给你看一个新版本的桥接模式的代码 ，因为我觉得你没有必要看最原始那个版本。其实我认为你根本不需要看任何代码，但是我敢肯定有些人无论如何就是想看代码。谁让我们是程序员呢？那就给我们看代码！
 ```javascript
 var RemoteControl = function(tv) {
@@ -144,6 +144,8 @@ pwr_remote.off();           // prints "Goodbye Toshiba user"
 上面就是JavaScript里的桥接模式。如果你还不过瘾，可以回过头去看[单例模式][cn1]。或者也可以关注这个系列的下一篇：[组合模式][cn3]。如果你认为此文对你有所帮助或者你只是纯粹地喜欢这篇文章，请你用文章下方的分享按钮把它分享出去。谢谢！
 
 
+[original_remote]: http://www.codingserf.com/wp-content/uploads/2015/05/original_remote.png
+[bridge_remote]: http://www.codingserf.com/wp-content/uploads/2015/05/bridge_remote.png
 JavaScript设计模式系列：
 - [单例模式][cn1]（[Singleton Pattern][en1]）
 - [桥接模式][cn2]（[Bridge Pattern][en2]）
@@ -163,21 +165,21 @@ JavaScript设计模式系列：
 转载请注明：
 英文作者：[Joe Zim](http://www.joezimjs.com/authors/joe-zimmerman/)
 英文原文：[http://www.joezimjs.com/javascript/javascript-design-patterns-bridge/][en2]
-中文翻译：[David @CodingSerf](http://www.codingserf.com)
-中文译文：[http://www.codingserf.com/index.php/2015/05/javascript-design-partterns-bridge/][cn2]
+中文译者：[David @CodingSerf](http://www.codingserf.com)
+中文译文：[http://www.codingserf.com/index.php/2015/05/javascript-design-patterns-bridge/][cn2]
 
-[cn1]: http://www.codingserf.com/index.php/2015/05/javascript-design-partterns-singleton/
-[cn2]: http://www.codingserf.com/index.php/2015/05/javascript-design-partterns-bridge/
-[cn3]: http://www.codingserf.com/index.php/2015/05/javascript-design-partterns-composite/
-[cn4]: http://www.codingserf.com/index.php/2015/05/javascript-design-partterns-facade/
-[cn5]: http://www.codingserf.com/index.php/2015/05/javascript-design-partterns-adapter/
-[cn6]: http://www.codingserf.com/index.php/2015/05/javascript-design-partterns-decorator/
-[cn7]: http://www.codingserf.com/index.php/2015/05/javascript-design-partterns-factory-part-1/
-[cn8]: http://www.codingserf.com/index.php/2015/05/javascript-design-partterns-factory-part-2/
-[cn9]: http://www.codingserf.com/index.php/2015/05/javascript-design-partterns-proxy/
-[cn10]: http://www.codingserf.com/index.php/2015/05/javascript-design-partterns-observer/
-[cn11]: http://www.codingserf.com/index.php/2015/05/javascript-design-partterns-command/
-[cn12]: http://www.codingserf.com/index.php/2015/05/javascript-design-partterns-chain-of-responsibility/
+[cn1]: http://www.codingserf.com/index.php/2015/05/javascript-design-patterns-singleton/
+[cn2]: http://www.codingserf.com/index.php/2015/05/javascript-design-patterns-bridge/
+[cn3]: http://www.codingserf.com/index.php/2015/05/javascript-design-patterns-composite/
+[cn4]: http://www.codingserf.com/index.php/2015/05/javascript-design-patterns-facade/
+[cn5]: http://www.codingserf.com/index.php/2015/05/javascript-design-patterns-adapter/
+[cn6]: http://www.codingserf.com/index.php/2015/05/javascript-design-patterns-decorator/
+[cn7]: http://www.codingserf.com/index.php/2015/05/javascript-design-patterns-factory-part-1/
+[cn8]: http://www.codingserf.com/index.php/2015/05/javascript-design-patterns-factory-part-2/
+[cn9]: http://www.codingserf.com/index.php/2015/05/javascript-design-patterns-proxy/
+[cn10]: http://www.codingserf.com/index.php/2015/05/javascript-design-patterns-observer/
+[cn11]: http://www.codingserf.com/index.php/2015/05/javascript-design-patterns-command/
+[cn12]: http://www.codingserf.com/index.php/2015/05/javascript-design-patterns-chain-of-responsibility/
 
 [en1]: http://www.joezimjs.com/javascript/javascript-design-patterns-singleton/
 [en2]: http://www.joezimjs.com/javascript/javascript-design-patterns-bridge/
