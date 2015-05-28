@@ -1,4 +1,4 @@
-这是关于JavaScript设计模式的系列文章的第一篇。1995年，Erich Gamma, Richard Helm, Ralph Johnson和John Vlissides（有名的四人组，译注：The Gang of Four, 后文统称GoF）出版了《设计模式：可复用面向对象软件的基础》，一本为软件架构和设计难题提供一系列解决方案的书。书中同时为这些解决方案（译注：即各种设计模式）提供了一份词汇参照。如果你感兴趣可以在[维基百科](http://en.wikipedia.org/wiki/Design_Patterns)上了解更多。
+这是关于JavaScript设计模式系列文章的第一篇。1995年，Erich Gamma, Richard Helm, Ralph Johnson和John Vlissides（有名的四人组，译注：The Gang of Four, 后文统称GoF）出版了《设计模式：可复用面向对象软件的基础》，一本为软件架构和设计难题提供一系列解决方案的书。书中同时为这些解决方案（译注：即各种设计模式）提供了一份词汇参照。如果你感兴趣可以在[维基百科](http://en.wikipedia.org/wiki/Design_Patterns)上了解更多。
 那本书里对于每种解决方案的实现是用C++和Smalltalk写的，它们与JavaScript大相径庭。另一本书《[Pro JavaScript Design Patterns](http://www.amazon.com/dp/159059908X/ref=as_li_ss_tl?tag=jozisjabl-20)》则是用JavaScript来实现那些设计模式的。我本希望从这本书里能得到很多知识，然而事与愿违……他们可能只是想调起你的胃口让你去买这本书罢了。如果你真的买了这本书一定要让他们知道是我推荐你买的。或许他们会给我一些补偿（也可能不会，但是至少我是这么希望的）。
 
 ## 孤独的单例模式
@@ -38,16 +38,16 @@ Singleton.method();
     some_method: function() {...}
 };
 ```
-如你所见，现在如果你想使用一个实用方法，可以在`Namespace。Util`下面找到它，就像下面代码中所示的那样。当然，下面所示的`some_method`方法因为并没有在单例中嵌套多层。
+如你所见，现在如果你想使用一个实用方法，可以在`Namespace.Util`下面找到它，就像下面代码中所示的那样。当然，下面所示的`some_method`方法并没有在单例中嵌套多层。
 ```javascript
 Namespace.Util.util_method1();
 Namespace.Ajax.ajax_method();
 Namespace.some_method();
 ```
-通常你有可能会把这些方法作为全局函数，这也就意味着它们有非常有可能会被覆盖，尤其是像`get`这样简单的名字，诸如此类的名字再平常不过了。你只需要把全部的变量和函数添加到一个单例中，就可以完全不给别人篡改你代码的机会。
+通常你有可能会把这些方法作为全局函数，这也就意味着它们非常有可能会被覆盖，尤其是像`get`这样简单的名字，诸如此类的名字再平常不过了。你只需要把全部的变量和函数添加到一个单例中，就可以完全不给别人篡改你代码的机会。
 
 ## 具体页面的JavaScript代码
-在很多情况下，一个网站的某些页面运行的JavaScript代码和其他页面是不同的。你可以用单例命名空间的技术来为每个页面组织专门的代码，然后在页面加载完成后运行它们。
+在很多情况下，一个网站的某些页面运行的JavaScript代码和其他页面是不同的。你可以用单例管理命名空间的技术来为每个页面组织专门的代码，然后在页面加载完成后执行它们。
 ```javascript
 Namespace.homepage = {
     init: function() {...},
@@ -75,7 +75,7 @@ window.onload = Namespace[pageName].init;
 ## 再说下《Pro JavaScript Design Patterns》
 《Pro JavaScript Design Patterns》这本书中对单例模式介绍了更多，然而事实上我把书中整整6页的内容压缩成这篇短小的博客，书中也提及了通过闭包，被动初始化和分支创建私有变量。就像我在文章开头所说，关于这本书我不想复制太多的内容过来，只是想勾起你的兴趣让你去买它。这么做的好处是，你既可以给他们经济援助，同时也能避免我让人家给告了。更何况，一篇博客文章不应该硬塞下一本书中一章的内容。
 
-如果你认为本文对你有所帮助或者你只是纯粹地喜欢这篇文章，请用文章下方的社交分享按钮把它传播出去。像我这种从后山来的从来不敢想像能有人像你这样帮我。谢谢！
+如果你认为本文对你有所帮助或者你只是纯粹地喜欢这篇文章，请用文章下方的社交分享按钮把它传播出去。我这种从后山来的从来不敢想像能有人像你这样帮我。谢谢！
 
 请继续关注JavaScript设计模式系列的更多文章：
 - [单例模式][cn1]（[Singleton Pattern][en1]）

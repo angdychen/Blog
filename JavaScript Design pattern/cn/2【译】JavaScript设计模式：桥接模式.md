@@ -1,9 +1,9 @@
-在上一篇博客中我讨论了[单例设计模式][cn1]以及如何在JavaScript中使用它。这次我们围绕桥接模式（the Bridge Pattern）展开讨论，为了强调它的重要性我们把它安排在JavaScript设计模式系列的第二篇。
+在上一篇博客中我讨论了[单例模式][cn1]以及如何在JavaScript中使用它。这次我们围绕桥接模式（the Bridge Pattern）展开讨论，为了强调它的重要性我们把它安排在JavaScript设计模式系列的第二篇。
 我读过的所有关于桥接模式的解释几乎都是对GoF（the Gang of Four）的直接引用，所以我在想要不我也这么写吧？桥接模式应该是“把抽象概念和具体实现分离开来，让这两部分可以完全独立地变化”。桥接模式在像JavaScript这种事件驱动的应用程序中相当有用。而事实上它是一个完全未被充分利用的设计模式。
 
 ## 事件监听器示例
 下面的例子里我会用一些[jQuery][jq]，所以如果你不知道某个函数的功能或用法，你可以查看jQuery的[文档](http://api.jquery.com/)。
-下面你将看到的这段代码是使用一个名叫`getXById`的API方法，当然这个方法的实现很糟糕。我们用一个click事件来确认是哪个元素的id会被发送。`getXById`回调本身会获取click元素的id，然后用这个获取到的id通过Ajax向服务端请求X。
+下面你将看到的这段代码是使用一个名叫`getXById`的API方法，当然这个方法的实现很糟糕。我们用一个click事件来确认是哪个元素的id会被发送。`getXById`自己会获取click元素的id，然后用这个获取到的id发起Ajax向服务端请求X。
 ```javascript
 getXById = function() {
     var id = this.id;
@@ -40,7 +40,7 @@ $('someElement').bind('click', getXBridge);
 
 ## 经典示例
 我所说的“经典”有双重含义：这个例子是比较常见的面向对象编程语言的案例，并且它使用了类（译注：即classical里的class）。
-JavaScript本身并没有类的概念，但是你可以模拟接口，并使用原型来模拟类。这个例子最早见于《[Head First Design Pattern](http://www.amazon.com/gp/product/0596007124/ref=as_li_ss_tl?tag=jozisjabl-20)》，那是一个Java版本。然而它其实是个无关紧要到在书的后面都没有提供代码实例的模式，所以我只能使用几张示意图（此外我还重建了这些图，因为我太聪明了）。
+JavaScript本身并没有类的概念，但是你可以模拟接口，并使用原型来模拟类。这个例子最早见于《[Head First Design Pattern](http://www.amazon.com/gp/product/0596007124/ref=as_li_ss_tl?tag=jozisjabl-20)》，那是一个Java版本。实际上它是个无关紧的模式，因为在书的后面都没有提供它的代码实例，所以我只能使用几张示意图（此外我还重画了这些图，就是因为我太聪明了）。
 
 ### 我们的首发产品
 ![original_remote.png][original_remote]
